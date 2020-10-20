@@ -1,15 +1,16 @@
 name: CI-docker
-on:
+on: 
   push: 
     branches: [main]
 jobs:
   docker:
     runs-on: ubuntu-18.04
     steps:
-      - name: checkout
+      - 
+        name: checkout
         uses: actions/checkout@v2
-        
-      - name: test
+      -
+        name: test
         run: |
           set -x
           docker build -t test --target=production --no-cache .
@@ -22,8 +23,10 @@ jobs:
           while true
             do
               sleep 1
-              docker exec $(docker ps -q) ps | grep "java --jar" && break
+              docker exec $(docker ps -q) ps | grep "java -jar" && break
+            done
           while true
             do
               sleep 1
               curl localhost -I | grep 200 && break
+            done
