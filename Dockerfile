@@ -31,4 +31,4 @@ WORKDIR $dir
 COPY --from=build $src_dir/$project.jar .
 
 ENTRYPOINT ["java", "-jar"]
-CMD ["spring-petclinit.jar"]
+CMD ["spring-petclinic.jar"]
