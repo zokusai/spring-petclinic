@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         -
-          image: fmartinve/spring-petclinic:latest
+          image: zokusai/spring-clinic:latest
           name: spring-petclinic
 ---
