@@ -1,7 +1,8 @@
 name: CI-docker
 on: 
   push: 
-    branches: [main]
+    branches: 
+      - dev
 jobs:
   docker:
     runs-on: ubuntu-18.04
