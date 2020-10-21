@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: spring-petclinic
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: spring-petclinic
@@ -11,9 +12,10 @@ spec:
     metadata:
       labels:
         app: spring-petclinic
+        
     spec:
       containers:
         -
           image: zokusai/spring-clinic:latest
-          name: spring-petclinic
+          name: java
 ---
