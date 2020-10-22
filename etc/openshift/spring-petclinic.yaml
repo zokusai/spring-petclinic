@@ -18,4 +18,14 @@ spec:
         -
           image: zokusai/spring-clinic:latest
           name: java
+          
+      resources:
+        limits:
+          cpu: 300m
+          memory: 900Mi
+        
+        requests:
+          cpu: 300m
+          memory: 900Mi
+                    
 ---
